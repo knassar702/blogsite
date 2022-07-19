@@ -8,7 +8,7 @@ PygmentsStyle = "monokai"
 
 paginate  = 10
 rssLimit  = 10  # Maximum number of items in the RSS feed.
-copyright = "©️  knassar702." # This message is only used by the RSS template.
+copyright = "" # This message is only used by the RSS template.
 
 # googleAnalytics = ""
 # disqusShortname = ""
@@ -37,7 +37,7 @@ disableHugoGeneratorInject = false
   posts = "/posts/:title/"
 
 [author]
-  name = "Jane Doe"
+  name = "knassar702"
 
 [blackfriday]
   hrefTargetBlank = true
