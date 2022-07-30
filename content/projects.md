@@ -11,7 +11,6 @@ this is a module-based web automation tool that I made for saving my scripting t
 what if you need to add a new Command option to scant3r for your script?
 easy without writing any code just open the `conf/opts.YAML file and you will find all options of scant3r so you can change and add what you want;D
 
-![scant3r_png](https://user-images.githubusercontent.com/45688522/170871350-80113c02-5733-4d04-9f09-c33bef80c2bf.png)
 
 
 ***
