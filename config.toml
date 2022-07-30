@@ -61,7 +61,7 @@ disableHugoGeneratorInject = false
 
   # Home subtitle of the index page.
   #
-  homeSubtitle = "Welcome to my side of the internet, where I share my knowledge with the world."
+  homeSubtitle = "Security Automation Specialist at Blacklock Security"
 
   # Set a background for the homepage
   # backgroundImage = "assets/images/background.jpg"
@@ -180,9 +180,9 @@ disableHugoGeneratorInject = false
 
 [menu]
   [[menu.main]]
-    identifier = "about"
-    name       = "About"
-    url        = "about/"
+    identifier = "projects"
+    name       = "Projects"
+    url        = "projects/"
   [[menu.main]]
     identifier = "posts"
     name       = "Posts"
