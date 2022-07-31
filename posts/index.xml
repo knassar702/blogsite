@@ -75,7 +75,9 @@ X-API-KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoia25hcy5tZSJ9.fb8Xti0
 </code></pre><h4 id="-zaproxy-1">&raquo; ZAPROXY</h4>
 <p>Open the <code>Request Editor</code> then send the login request to the authentication endpoint, click on the request in the <code>History tab</code>, Mark the Token value from the response, and flag it as an Authentication Loggin</p>
 <p><img src="/images/zap_session.png" alt="zap_session"></p>
-<h4 id="-burpsuite-1">&raquo; BurpSuite</h4>
+<p>or write a simple python script for that and add the API-KEY header in <a href="https://www.zaproxy.org/docs/authentication/handling-auth-yourself/#authentication-env-vars"> ZAP env variable</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ export ZAP_AUTH_HEADER<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;X-API: (RANDOM_KEY)&#34;</span>
+</span></span></code></pre></div><h4 id="-burpsuite-1">&raquo; BurpSuite</h4>
 <p>(doesn&rsquo;t support)</p>
 <hr>
 <h3 id="saml-sso">SAML (SSO)</h3>
