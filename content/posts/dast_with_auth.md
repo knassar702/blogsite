@@ -96,6 +96,13 @@ Open the `Request Editor` then send the login request to the authentication endp
 
 ![zap_session](/images/zap_session.png)
 
+or write a simple python script for that and add the API-KEY header in [ ZAP env variable](https://www.zaproxy.org/docs/authentication/handling-auth-yourself/#authentication-env-vars)
+
+```bash
+$ export ZAP_AUTH_HEADER="X-API: (RANDOM_KEY)"
+```
+  
+
 #### >> BurpSuite 
 (doesn't support)
 
