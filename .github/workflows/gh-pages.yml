@@ -27,7 +27,7 @@ jobs:
         run: hugo --minify
         
       - name: push to neocities
-    		uses: bcomnes/deploy-to-neocities@v1
+        uses: bcomnes/deploy-to-neocities@v1
         with:
             api_token: ${{ secrets.NEOCITIES_API_TOKEN }}
             cleanup: false
