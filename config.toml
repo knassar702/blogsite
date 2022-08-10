@@ -13,7 +13,7 @@ copyright = "" # This message is only used by the RSS template.
 # googleAnalytics = ""
 # disqusShortname = ""
 
-archetypeDir = "archetypes"
+archetypeDir = "archetypes" 
 contentDir   = "content"
 dataDir      = "data"
 layoutDir    = "layouts"
