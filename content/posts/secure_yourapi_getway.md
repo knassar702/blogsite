@@ -71,3 +71,5 @@ You need to figure out
     - for what purpose
     - for how long
 
+
+![micro_png](/images/micro.svg)
