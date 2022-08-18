@@ -33,7 +33,7 @@ OAuth 2.0 is the industry-standard protocol for authorization. OAuth 2.0 focuses
 <ul>
 <li>
 <p>Basic Authentication<br>
-why is this choice is <strong>BAD</strong> for your API?</p>
+why is this choice bad for your API?</p>
 <ul>
 <li>
 <p>the username and password are long-living credentials<br>
@@ -58,8 +58,8 @@ anything with those credentials, even on other systems</p>
 </li>
 <li>
 <p>Mutual TLS (MTLS)<br>
-This is a Good Protocole to use, all it does is verify the Cert Key between the server and client, this type of protocoles has a Expire option so this solve the problem that we&rsquo;ve with Basic Authentication Header, but this not the best choice for the API (or the end-user), it&rsquo;s like riding a seaplane to walking on the water
-it will work but it would be better if you use a Sea Boat because it&rsquo;s designed for this only and its more faster
+This is a Good Protocole to use, all it does is verify the Cert Key between the server and client, this type of protocol has an Expire option so this solves the problem that we&rsquo;ve with the Basic Authentication Header, but this is not the best choice for the API (or the end-user), it&rsquo;s like riding a seaplane to walking on the water
+it will work but it would be better if you use a Sea Boat because it&rsquo;s designed for this only and it&rsquo;s faster
 we will use it later to secure the connection between the API-Gateway and the microservices</p>
 </li>
 <li>
@@ -70,7 +70,7 @@ You need to figure out</p>
 <li>who wants access to your resources</li>
 <li>for what purpose</li>
 <li>for how long<br>
-Auth 2.0 provides all of this requirements, so we can use it instead of HTTP/1.0 Basic Authentication or MTLS\</li>
+Auth 2.0 provides all of these requirements, so we can use it instead of HTTP/1.0 Basic Authentication or MTLS\</li>
 </ul>
 </li>
 </ul>
