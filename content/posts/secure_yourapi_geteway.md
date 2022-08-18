@@ -110,5 +110,5 @@ first, we will make a Firewall rule to block any External requests, Also we'll u
 ![micro_png](/images/micro.svg)
 
 
-this was a Quick summary of microservices Security in Action Book
+this was a Quick summary of microservices Security in Action Book (Part 2)
 follow the RSS to see more posts about this book (Chapter by Chapter)
