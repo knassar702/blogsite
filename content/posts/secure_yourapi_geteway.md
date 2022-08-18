@@ -60,8 +60,8 @@ OAuth 2.0 is the industry-standard protocol for authorization. OAuth 2.0 focuses
 
 
 * Mutual TLS (MTLS)\
-    This is a Good Protocole to use, all it does is verify the Cert Key between the server and client, this type of protocol has an Expire option so this solves the problem that we've with the Basic Authentication Header, but this is not the best choice for the API (or the end-user), it's like riding a seaplane to walking on the water
-    it will work but it would be better if you use a Sea Boat because it's designed for this only and it's faster 
+    This is a Good Protocole to use, all it does is verify the Cert Key between the server and client, this type of protocol has an Expire option so this solves the problem that we've with the Basic Authentication Header, but this is not the best choice for the API (or the end-user), it's like taking a seaplane to float on the water
+    it will work but it would be better if you take a Sea Boat because it's designed for this only and it's faster 
     we will use it later to secure the connection between the API-Gateway and the microservices
 
 
