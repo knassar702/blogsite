@@ -86,7 +86,7 @@ http://localhost:9090/token/oauth/token | jq
 
 
 # Check Permission
-$ http://localhost:9090/oauth/check_token -H "Authorization: Basic YXBwbGljYXRpb24xOmFwcGxpY2F0aW9uMXNlY3JldA==" -d "token=626e34e6-002d-4d53-9656-9e06a5e7e0dc&
+$ curl http://localhost:9090/oauth/check_token -H "Authorization: Basic YXBwbGljYXRpb24xOmFwcGxpY2F0aW9uMXNlY3JldA==" -d "token=626e34e6-002d-4d53-9656-9e06a5e7e0dc&
 token_type_hint=access_token" | jq
 
 {
