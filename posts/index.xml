@@ -58,8 +58,8 @@ anything with those credentials, even on other systems</p>
 </li>
 <li>
 <p>Mutual TLS (MTLS)<br>
-This is a Good Protocole to use, all it does is verify the Cert Key between the server and client, this type of protocol has an Expire option so this solves the problem that we&rsquo;ve with the Basic Authentication Header, but this is not the best choice for the API (or the end-user), it&rsquo;s like riding a seaplane to walking on the water
-it will work but it would be better if you use a Sea Boat because it&rsquo;s designed for this only and it&rsquo;s faster
+This is a Good Protocole to use, all it does is verify the Cert Key between the server and client, this type of protocol has an Expire option so this solves the problem that we&rsquo;ve with the Basic Authentication Header, but this is not the best choice for the API (or the end-user), it&rsquo;s like taking a seaplane to float on the water
+it will work but it would be better if you take a Sea Boat because it&rsquo;s designed for this only and it&rsquo;s faster
 we will use it later to secure the connection between the API-Gateway and the microservices</p>
 </li>
 <li>
