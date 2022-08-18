@@ -87,7 +87,7 @@ Auth 2.0 provides all of these requirements, so we can use it instead of HTTP/1.
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># Check Permission</span>
-</span></span><span style="display:flex;"><span>$ http://localhost:9090/oauth/check_token -H <span style="color:#e6db74">&#34;Authorization: Basic YXBwbGljYXRpb24xOmFwcGxpY2F0aW9uMXNlY3JldA==&#34;</span> -d <span style="color:#e6db74">&#34;token=626e34e6-002d-4d53-9656-9e06a5e7e0dc&amp;
+</span></span><span style="display:flex;"><span>$ curl http://localhost:9090/oauth/check_token -H <span style="color:#e6db74">&#34;Authorization: Basic YXBwbGljYXRpb24xOmFwcGxpY2F0aW9uMXNlY3JldA==&#34;</span> -d <span style="color:#e6db74">&#34;token=626e34e6-002d-4d53-9656-9e06a5e7e0dc&amp;
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">token_type_hint=access_token&#34;</span> | jq
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">{</span>
