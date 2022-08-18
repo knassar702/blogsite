@@ -39,7 +39,7 @@ OAuth 2.0 is the industry-standard protocol for authorization. OAuth 2.0 focuses
 
 
 * Basic Authentication\
-    why is this choice is **BAD** for your API?
+    why is this choice bad for your API?
 
     - the username and password are long-living credentials\
     if a user provides a username and password to an application, the
@@ -60,8 +60,8 @@ OAuth 2.0 is the industry-standard protocol for authorization. OAuth 2.0 focuses
 
 
 * Mutual TLS (MTLS)\
-    This is a Good Protocole to use, all it does is verify the Cert Key between the server and client, this type of protocoles has a Expire option so this solve the problem that we've with Basic Authentication Header, but this not the best choice for the API (or the end-user), it's like riding a seaplane to walking on the water
-    it will work but it would be better if you use a Sea Boat because it's designed for this only and its more faster 
+    This is a Good Protocole to use, all it does is verify the Cert Key between the server and client, this type of protocol has an Expire option so this solves the problem that we've with the Basic Authentication Header, but this is not the best choice for the API (or the end-user), it's like riding a seaplane to walking on the water
+    it will work but it would be better if you use a Sea Boat because it's designed for this only and it's faster 
     we will use it later to secure the connection between the API-Gateway and the microservices
 
 
@@ -71,7 +71,7 @@ You need to figure out
     - who wants access to your resources 
     - for what purpose
     - for how long\
-Auth 2.0 provides all of this requirements, so we can use it instead of HTTP/1.0 Basic Authentication or MTLS\
+Auth 2.0 provides all of these requirements, so we can use it instead of HTTP/1.0 Basic Authentication or MTLS\
 ```bash
 $ curl -u application1:application1secret \
 -H "Content-Type: application/x-www-form-urlencoded" \
