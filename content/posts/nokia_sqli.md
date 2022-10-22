@@ -38,4 +38,4 @@ After dumping all databases using the --all option and unencrypt the password of
 ![nokia_pwn](https://1.bp.blogspot.com/-87ctqF3EmDM/XscxFpvVAhI/AAAAAAAAENE/Cgi-Kfnjxco0cND_FONrVmsOWySdiu_SQCK4BGAsYHg/cp.jpg)
 
 
-sea ya :v:
+see ya :v:
