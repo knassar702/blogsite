@@ -4,8 +4,9 @@ type: page
 ---
 
 
-### Hello my projects are
+### my projects are
 
-1. [Tatooine](/projects/tatooine/)
-2. [Hydra](/projects/hydra/)
-3. [Bludhaven](/projects/bludhaven/)
+1. [BlackLock Log4j Scanner](/projects/block_log4j) - Online Log4j Scanner
+2. [scant3r](/projects/scant3r/) - Bug Bounty Automation Tool
+3. [Lorsrf](/projects/lorsrf/) - SSRF Parameter finder
+4. [hackinglab](/projects/hackinglab/) - Small Vulnerable Web application 
