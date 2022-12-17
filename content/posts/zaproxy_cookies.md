@@ -77,3 +77,12 @@ function logger() {
 }
 
 ```
+
+
+```diff
+-- var script = 'document.cookie = \'token=' + token + '\';\n' +
+    'window.localStorage.setItem(\'token\', \'' + token + '\');';
+++ var script = 'document.cookie = \'login=test/test; token=12345\';' + '\n' +
+    "window.localStorage.setItem('login','test/test');window.localStorage.setItem('token','12345');"
+'
+```
