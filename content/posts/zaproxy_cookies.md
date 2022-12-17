@@ -1,6 +1,11 @@
 ---
 title: "How to set cookies for zaproxy ajax spider manually"
 date: 2022-12-17T16:07:24+02:00
+description: "How to set cookies for zaproxy ajax spider manually "
+tags: ["security","automation","webpentesting"]
+type: post
+weight: 25
+showTableOfContents: true
 draft: false
 ---
 
