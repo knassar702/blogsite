@@ -41,9 +41,35 @@
 </span></span><span style=display:flex><span>	<span style=color:#a6e22e>print</span>(<span style=color:#e6db74>&#39;[&#39;</span> <span style=color:#f92672>+</span> <span style=color:#66d9ef>this</span>[<span style=color:#e6db74>&#39;zap.script.name&#39;</span>] <span style=color:#f92672>+</span> <span style=color:#e6db74>&#39;] &#39;</span> <span style=color:#f92672>+</span> <span style=color:#a6e22e>arguments</span>[<span style=color:#ae81ff>0</span>]);
 </span></span><span style=display:flex><span>}
 </span></span></code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-diff data-lang=diff><span style=display:flex><span><span style=color:#f92672>-- var script = &#39;document.cookie = \&#39;token=&#39; + token + &#39;\&#39;;\n&#39; +
-</span></span></span><span style=display:flex><span><span style=color:#f92672></span>    &#39;window.localStorage.setItem(\&#39;token\&#39;, \&#39;&#39; + token + &#39;\&#39;);&#39;;
-</span></span><span style=display:flex><span><span style=color:#a6e22e>++ var script = &#39;document.cookie = \&#39;login=test/test; token=12345\&#39;;&#39; + &#39;\n&#39; +
-</span></span></span><span style=display:flex><span><span style=color:#a6e22e></span>    &#34;window.localStorage.setItem(&#39;login&#39;,&#39;test/test&#39;);window.localStorage.setItem(&#39;token&#39;,&#39;12345&#39;);&#34;
-</span></span><span style=display:flex><span>&#39;
-</span></span></code></pre></div></p></div></div><aside class=post-toc><nav id=toc><nav id=TableOfContents><ul><li><ul><li><ul><li><ul><li><a href=#why>Why?</a></li><li><a href=#steps>Steps</a></li></ul></li></ul></li></ul></li></ul></nav></nav></aside></main><footer class=footer><span>&copy; 2022 The Marauders</span>
+</span></span></span><span style=display:flex><span><span style=color:#f92672>--    &#39;window.localStorage.setItem(\&#39;token\&#39;, \&#39;&#39; + token + &#39;\&#39;);&#39;;
+</span></span></span><span style=display:flex><span><span style=color:#f92672></span><span style=color:#a6e22e>++ var script = &#39;document.cookie = \&#39;login=test/test; token=12345\&#39;;&#39; + &#39;\n&#39; +
+</span></span></span><span style=display:flex><span><span style=color:#a6e22e>++    &#34;window.localStorage.setItem(&#39;login&#39;,&#39;test/test&#39;);window.localStorage.setItem(&#39;token&#39;,&#39;12345&#39;);&#34;
+</span></span></span><span style=display:flex><span><span style=color:#a6e22e></span>&#39;
+</span></span></code></pre></div><h4 id=real-example>Real Example</h4><p><img src=https://i.ibb.co/8X9fP0h/image.png alt=demo_php></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span>	<span style=color:#75715e>// This script will log a browser into Juice Shop when forced user mode is enabled.
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>	<span style=color:#75715e>// The &#39;Juice Shop Session Management.js&#39; script must have been set to authenticate correctly.
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>	<span style=color:#75715e>// Make sure to use the version of that script in this repo rather than the one included with ZAP 2.9.0 as
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>	<span style=color:#75715e>// it has been enhanced to support this script.
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>	
+</span></span><span style=display:flex><span>	<span style=color:#75715e>//Change the jsUrl var if the instance of Juice Shop you are using is not listening on http://localhost:3000
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>	<span style=color:#66d9ef>var</span> <span style=color:#a6e22e>jsUrl</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;http://testphp.vulnweb.com/&#39;</span>;
+</span></span><span style=display:flex><span>	
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>function</span> <span style=color:#a6e22e>browserLaunched</span>(<span style=color:#a6e22e>ssutils</span>) {
+</span></span><span style=display:flex><span>			<span style=color:#a6e22e>logger</span>(<span style=color:#e6db74>&#39;browserLaunched &#39;</span> <span style=color:#f92672>+</span> <span style=color:#a6e22e>ssutils</span>.<span style=color:#a6e22e>getBrowserId</span>());
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>var</span> <span style=color:#a6e22e>wd</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>ssutils</span>.<span style=color:#a6e22e>getWebDriver</span>();
+</span></span><span style=display:flex><span>			<span style=color:#a6e22e>wd</span>.<span style=color:#a6e22e>get</span>(<span style=color:#a6e22e>jsUrl</span>);
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>var</span> <span style=color:#a6e22e>url</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>ssutils</span>.<span style=color:#a6e22e>waitForURL</span>(<span style=color:#ae81ff>5000</span>);
+</span></span><span style=display:flex><span>   			<span style=color:#a6e22e>logger</span>(<span style=color:#a6e22e>url</span>)
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>url</span>.<span style=color:#a6e22e>startsWith</span>(<span style=color:#a6e22e>jsUrl</span>)) {
+</span></span><span style=display:flex><span>				<span style=color:#66d9ef>var</span> <span style=color:#a6e22e>script</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;document.cookie = \&#39;login=test/test\&#39;;&#39;</span> <span style=color:#f92672>+</span> <span style=color:#e6db74>&#39;\n&#39;</span> <span style=color:#f92672>+</span>
+</span></span><span style=display:flex><span>					<span style=color:#e6db74>&#39;window.localStorage.setItem(\&#39;login\&#39;, \&#39;&#39;</span> <span style=color:#f92672>+</span> <span style=color:#e6db74>&#39;test/test&#39;</span><span style=color:#f92672>+</span> <span style=color:#e6db74>&#39;\&#39;);&#39;</span>;
+</span></span><span style=display:flex><span>				<span style=color:#a6e22e>wd</span>.<span style=color:#a6e22e>executeScript</span>(<span style=color:#a6e22e>script</span>);
+</span></span><span style=display:flex><span>			}
+</span></span><span style=display:flex><span>	}
+</span></span><span style=display:flex><span>	
+</span></span><span style=display:flex><span>	
+</span></span><span style=display:flex><span>	<span style=color:#75715e>// Logging with the script name is super helpful!
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>	<span style=color:#66d9ef>function</span> <span style=color:#a6e22e>logger</span>() {
+</span></span><span style=display:flex><span>		<span style=color:#a6e22e>print</span>(<span style=color:#e6db74>&#39;[&#39;</span> <span style=color:#f92672>+</span> <span style=color:#66d9ef>this</span>[<span style=color:#e6db74>&#39;zap.script.name&#39;</span>] <span style=color:#f92672>+</span> <span style=color:#e6db74>&#39;] &#39;</span> <span style=color:#f92672>+</span> <span style=color:#a6e22e>arguments</span>[<span style=color:#ae81ff>0</span>]);
+</span></span><span style=display:flex><span>	}
+</span></span></code></pre></div></p></div></div><aside class=post-toc><nav id=toc><nav id=TableOfContents><ul><li><ul><li><ul><li><ul><li><a href=#why>Why?</a></li><li><a href=#steps>Steps</a></li><li><a href=#real-example>Real Example</a></li></ul></li></ul></li></ul></li></ul></nav></nav></aside></main><footer class=footer><span>&copy; 2022 The Marauders</span>
 <span>Made with &#10084;&#65039; using <a target=_blank href=https://github.com/526avijitgupta/gokarna>Gokarna</a></span></footer></body></html>
