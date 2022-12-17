@@ -1,21 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>automation on Khaled Nassar</title>
-    <link>https://www.knas.me/tags/automation/</link>
-    <description>Recent content in automation on Khaled Nassar</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 30 Jul 2022 16:35:19 +0200</lastBuildDate><atom:link href="https://www.knas.me/tags/automation/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>DAST with authentication</title>
-      <link>https://www.knas.me/posts/dast-with-authentication/</link>
-      <pubDate>Sat, 30 Jul 2022 16:35:19 +0200</pubDate>
-      
-      <guid>https://www.knas.me/posts/dast-with-authentication/</guid>
-      <description>Hello, sometimes when you trying to automate something like XSS scanning you will find a big wall in your way that is called Authentication there are a lot of methods to use to solve this problem, in this blog I will show can we automate it first, we start with a small description of the authentication method with the solution in different tools and cases
- Form-based (Cookies) this is the easiest one to automate because it doesn&amp;rsquo;t require many steps just send a request to a custom endpoint with your credentials in the request body and you will the authentication cookies in the Set-Cookie response header easy right?</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>automation on Khaled Nassar</title><link>https://blog.knas.me/tags/automation/</link><description>Recent content in automation on Khaled Nassar</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 17 Dec 2022 16:07:24 +0200</lastBuildDate><atom:link href="https://blog.knas.me/tags/automation/index.xml" rel="self" type="application/rss+xml"/><item><title>How to set cookies for zaproxy ajax spider manually</title><link>https://blog.knas.me/posts/zaproxy_cookies/</link><pubDate>Sat, 17 Dec 2022 16:07:24 +0200</pubDate><guid>https://blog.knas.me/posts/zaproxy_cookies/</guid><description>Greetings 👋! In this blog, we will learn how to manually insert cookies into the Ajax spider browser in Zaproxy
+Why? You cannot automate the logging process because sometimes the target uses Capatch on the login page, but you can log in and copy the cookies into Zap.
+You can control every aspect of Zaproxy using its scripting feature
+With Selenium&amp;rsquo;s Firefox or Chrome browser plugin, we can write a script that executes JavaScript code whenever the Selenium tab is opened in Zap</description></item></channel></rss>
