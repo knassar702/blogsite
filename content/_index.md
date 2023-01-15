@@ -10,7 +10,7 @@ description: "It is my personal blog where I share my thoughts about cyber secur
 ## Welcome, friend
 
 
-It is a pleasure to welcome you to my blog in which I discuss cyber security, particularly DAST and web security vulnerabilities that I discovered. There are times when I write about other topics, such as my social life and acquiring new languages, so search only for blogs related to cybersecurity with the **security** tag.
+It is a pleasure to welcome you to my blog in which I discuss cyber security, particularly DAST and web security vulnerabilities that I discovered. There are times when I write about other topics, such as my social life and acquiring new languages, so search only for blogs related to cybersecurity with the [security](https://blog.knas.me/tags/security/) tag.
 
 I have Linkedin profiles associated with [my career](https://www.linkedin.com/in/knassar702/) for more information.
 
