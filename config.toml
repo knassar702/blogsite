@@ -1,4 +1,4 @@
-baseURL = "https://example.com"
+baseURL = "https://blog.knas.me"
 title   = "Khaled Nassar"
 languageCode = "en-us"
 theme = "hello-friend-ng"
