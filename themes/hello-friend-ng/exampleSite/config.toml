@@ -1,5 +1,5 @@
 baseURL = "https://example.com"
-title   = "Khaled Nassar"
+title   = "Hello Friend NG"
 languageCode = "en-us"
 theme = "hello-friend-ng"
 
@@ -8,7 +8,7 @@ PygmentsStyle = "monokai"
 
 paginate  = 10
 rssLimit  = 10  # Maximum number of items in the RSS feed.
-copyright = "NonCommercial 4.0 International License" # This message is only used by the RSS template.
+copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License." # This message is only used by the RSS template.
 
 # googleAnalytics = ""
 # disqusShortname = ""
@@ -34,10 +34,10 @@ disable404     = false
 disableHugoGeneratorInject = false
 
 [permalinks]
-  posts = "/posts/:title/"
+  posts = "/posts/:year/:month/:title/"
 
 [author]
-  name = "Khaled Nassar"
+  name = "Jane Doe"
 
 [blackfriday]
   hrefTargetBlank = true
@@ -55,13 +55,13 @@ disableHugoGeneratorInject = false
 
   # Metadata mostly used in document's head
   # 
-  description = "Simple personal blog that I wrote about cyber security and programming"
-  keywords = "bugbounty, cybersecurity, rust, python, zaproxy, devops, devsecops, linux , websecurity, security automation"
+  description = "Nice theme for homepages and blogs"
+  keywords = ""
   images = [""]
 
   # Home subtitle of the index page.
   #
-  homeSubtitle = "Security Automation Engineer | Part-time bug bounty hunter"
+  homeSubtitle = "Hello Friend NG"
 
   # Set a background for the homepage
   # backgroundImage = "assets/images/background.jpg"
@@ -117,6 +117,8 @@ disableHugoGeneratorInject = false
 
     topText = []
     bottomText = [
+      "Powered by <a href=\"http://gohugo.io\">Hugo</a>",
+      "Made with &#10084; by <a href=\"https://github.com/rhazdon\">Djordje Atlialp</a>"
     ]
 
   # Colors for favicons
@@ -158,25 +160,34 @@ disableHugoGeneratorInject = false
   # Social icons
   [[params.social]]
     name = "twitter"
-    url  = "https://twitter.com/knassar702"
+    url  = "https://twitter.com/"
 
   [[params.social]]
     name = "email"
-    url  = "mailto:knassar702@gmail.com"
+    url  = "mailto:nobody@example.com"
 
   [[params.social]]
     name = "github"
-    url  = "https://github.com/knassar702"
+    url  = "https://github.com/"
 
   [[params.social]]
     name = "linkedin"
-    url  = "https://www.linkedin.com/in/knassar702/"
+    url  = "https://www.linkedin.com/"
 
-#  [[params.social]]
-#    name = "stackoverflow"
-#    url  = "https://www.stackoverflow.com/"
+  [[params.social]]
+    name = "stackoverflow"
+    url  = "https://www.stackoverflow.com/"
 
 [languages]
+  [languages.en]
+    subtitle  = "Hello Friend NG Theme"
+    weight    = 1
+    copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
+
+  [languages.fr]
+    subtitle  = "Hello Friend NG Theme"
+    weight    = 2
+    copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
 
 [menu]
   [[menu.main]]
