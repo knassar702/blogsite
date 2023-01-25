@@ -1,7 +1,7 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Khaled Nassar</title><link>https://blog.knas.me/posts/</link><description>Recent content in Posts on Khaled Nassar</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>NonCommercial 4.0 International License</copyright><lastBuildDate>Sat, 17 Dec 2022 16:07:24 +0200</lastBuildDate><atom:link href="https://blog.knas.me/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>How to set cookies for zaproxy ajax spider manually</title><link>https://blog.knas.me/posts/how-to-set-cookies-for-zaproxy-ajax-spider-manually/</link><pubDate>Sat, 17 Dec 2022 16:07:24 +0200</pubDate><guid>https://blog.knas.me/posts/how-to-set-cookies-for-zaproxy-ajax-spider-manually/</guid><description>Greetings 👋! In this blog, we will learn how to manually insert cookies into the Ajax spider browser in Zaproxy
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Khaled Nassar</title><link>https://blog.knas.me/posts/</link><description>Recent content in Posts on Khaled Nassar</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>NonCommercial 4.0 International License</copyright><lastBuildDate>Wed, 25 Jan 2023 11:37:10 +0200</lastBuildDate><atom:link href="https://blog.knas.me/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>How to set cookies for zaproxy ajax spider manually</title><link>https://blog.knas.me/posts/how-to-set-cookies-for-zaproxy-ajax-spider-manually/</link><pubDate>Sat, 17 Dec 2022 16:07:24 +0200</pubDate><guid>https://blog.knas.me/posts/how-to-set-cookies-for-zaproxy-ajax-spider-manually/</guid><description>Greetings 👋! In this blog, we will learn how to manually insert cookies into the Ajax spider browser in Zaproxy without doing an login automation
 Why? You cannot automate the logging process because sometimes the target uses Capatch on the login page, but you can log in and copy the cookies into Zap.
 You can control every aspect of Zaproxy using its scripting feature
-With Selenium&amp;rsquo;s Firefox or Chrome browser plugin, we can write a script that executes JavaScript code whenever the Selenium tab is opened in Zap</description><content type="html"><![CDATA[<p>Greetings 👋! In this blog, we will learn how to manually insert cookies into the Ajax spider browser in Zaproxy</p>
+With Selenium&amp;rsquo;s Firefox or Chrome browser plugin, we can write a script that executes JavaScript code whenever the Selenium tab is opened in Zap</description><content type="html"><![CDATA[<p>Greetings 👋! In this blog, we will learn how to manually insert cookies into the Ajax spider browser in Zaproxy without doing an login automation</p>
 <h4 id="why">Why?</h4>
 <p>You cannot automate the logging process because sometimes the target uses Capatch on the login page, but you can log in and copy the cookies into Zap.</p>
 <p>You can control every aspect of Zaproxy using its scripting feature</p>
@@ -154,4 +154,44 @@ and after searching with this version on exploit-DB i found SQLI injection in th
 <p>After dumping all databases using the &ndash;all option and unencrypt the password of the admin account let&rsquo;s login in admin panel</p>
 <p><img src="https://1.bp.blogspot.com/-87ctqF3EmDM/XscxFpvVAhI/AAAAAAAAENE/Cgi-Kfnjxco0cND_FONrVmsOWySdiu_SQCK4BGAsYHg/cp.jpg" alt="nokia_pwn"></p>
 <p>see ya ✌️</p>
+]]></content></item><item><title>With a single request, you can kill any Gitea server</title><link>https://blog.knas.me/posts/with-a-single-request-you-can-kill-any-gitea-server/</link><pubDate>Wed, 25 Jan 2023 11:37:10 +0200</pubDate><guid>https://blog.knas.me/posts/with-a-single-request-you-can-kill-any-gitea-server/</guid><description>Hey 😃
+in this blog I&amp;rsquo;m going to tell you how I was able to kill/dos any Gitea server I discovered this bug in Gitea version 1.14.2 in 2021
+which was fixed in 1.14.3 by the Gitea team Please note that I wasn&amp;rsquo;t targeting Gitea at all, I was doing some bug bounty hunting on a private target That target&amp;rsquo;s staging-dev.target.com has gitea on it
+and I thought, &amp;ldquo;Okay, I think there&amp;rsquo;s CVES for that product&amp;rdquo; Unfortunately, the POC isn&amp;rsquo;t included in the CVE report (only the PR on github)</description><content type="html"><![CDATA[<p>Hey 😃</p>
+<p>in this blog I&rsquo;m going to tell you how I was able to kill/dos any Gitea server
+I discovered this bug in Gitea version 1.14.2 in 2021</p>
+<p>which was fixed in 1.14.3 by the Gitea team <br>
+Please note that I wasn&rsquo;t targeting Gitea at all, I was doing some bug bounty hunting on a private target
+That target&rsquo;s staging-dev.target.com has gitea on it</p>
+<p>and I thought, &ldquo;Okay, I think there&rsquo;s CVES for that product&rdquo; <br>
+Unfortunately, the POC isn&rsquo;t included in the CVE report (only the PR on github)</p>
+<p>so I decided to play around and see if there&rsquo;s any private keys in the repos on this gitea server (I didn&rsquo;t find any)</p>
+<p>and my mind give me an idea, what If I created an account on this server?
+I thought I could find out more because maybe there&rsquo;s an option that lets the user make the repositories private for people with an account on Gitea</p>
+<p>After creating my account, I didn&rsquo;t see any difference
+so the last option I have is to send emojis to Gitea&rsquo;s issues page for trolling or joking</p>
+<p>Then I opened Zaproxy and sent many of these emojis to the issues body API in one request
+Afterwards, I noticed that subdomain response time is going up
+I got a 500 error, and boom, the server wasn&rsquo;t responding when I try to visit the gitea issue that I opened</p>
+<p><img src="https://media.tenor.com/oo6YIBG8_xIAAAAd/excited-hockey.gif" alt="Yayy"></p>
+<p>When I reported this bug to my target&rsquo;s security team,
+the response was too fast, saying &ldquo;Sorry, this is not a part of our products. Could you please forward this report to the Gitea security team&rdquo;
+But what&rsquo;s good is they provide me with more info to make a good report for the Gitea security team like logs, screenshots of CPU usage, etc.
+<img src="/images/gitea_cpu.png" alt="cpu"></p>
+<p>When someone visits my gitea issue containing the emojis, the CPU usage gets high. That&rsquo;s because there&rsquo;s too much <strong>text formatting/processing</strong> happening in the back-end for the comment
+After I reported the bug to Gitea, they asked me some questions about the environment and if I could reproduce it at the last version (it&rsquo;s on try.gitea.io)</p>
+<p>I&rsquo;ve included it in the report</p>
+<ul>
+<li>Gitea version : 1.14.2</li>
+<li>Git version:  2.32.0</li>
+<li>Operating system: Linux</li>
+<li>Database: MySQL</li>
+<li>Can you reproduce the bug at <a href="https://try.gitea.io">https://try.gitea.io</a>: Yes (<a href="https://try.gitea.io/dtestman/test/issues/1">https://try.gitea.io/dtestman/test/issues/1</a>)</li>
+</ul>
+<p>They respond after 2 days with validating the bug and a PR, and my name is on the release page for my next release 😄</p>
+<p><img src="/images/gitea_mail.png" alt="gitea_mail"></p>
+<p>here&rsquo;s the release page: <a href="https://blog.gitea.io/2021/06/gitea-1.14.3-is-released/">https://blog.gitea.io/2021/06/gitea-1.14.3-is-released/</a></p>
+<p>and the fix PR: <a href="https://github.com/go-gitea/gitea/pull/16185">https://github.com/go-gitea/gitea/pull/16185</a></p>
+<p>See you</p>
+<p><img src="https://media.tenor.com/b8DvJ53k8soAAAAd/rat-bye.gif" alt="bye"></p>
 ]]></content></item></channel></rss>
