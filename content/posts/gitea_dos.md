@@ -20,7 +20,7 @@ Please note that I wasn't targeting Gitea at all, I was doing some bug bounty hu
 That target's staging-dev.target.com has gitea on it 
 
 and I thought, "Okay, I think there's CVES for that product" \
-Unfortunately, the POC isn't included in the CVE report (only the PR on github) 
+and yeah I found some but Unfortunately, the POC isn't included in the CVE report (only the PR on github) 
 
 
 so I decided to play around and see if there's any private keys in the repos on this gitea server (I didn't find any)
