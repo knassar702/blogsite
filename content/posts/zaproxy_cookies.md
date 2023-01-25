@@ -9,7 +9,7 @@ showTableOfContents: true
 draft: false
 ---
 
-Greetings :wave:! In this blog, we will learn how to manually insert cookies into the Ajax spider browser in Zaproxy
+Greetings :wave:! In this blog, we will learn how to manually insert cookies into the Ajax spider browser in Zaproxy without doing an login automation
 
 #### Why?
 
