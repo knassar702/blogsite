@@ -12,7 +12,7 @@ hasCJKLanguage = true
 
 [params]
     author = "Khaled Nassar"
-    avatar = "https://avatars.githubusercontent.com/u/45688522?v=4"
+    avatar = "avatar.jpg"
     # avatarDescription = "My avatar description"
     favicon = "favicon.ico"
     description = """
