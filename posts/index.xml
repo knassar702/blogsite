@@ -154,6 +154,41 @@ and after searching with this version on exploit-DB i found SQLI injection in th
 <p>After dumping all databases using the &ndash;all option and unencrypt the password of the admin account let&rsquo;s login in admin panel</p>
 <p><img src="https://1.bp.blogspot.com/-87ctqF3EmDM/XscxFpvVAhI/AAAAAAAAENE/Cgi-Kfnjxco0cND_FONrVmsOWySdiu_SQCK4BGAsYHg/cp.jpg" alt="nokia_pwn"></p>
 <p>see ya ✌️</p>
+]]></content></item><item><title>Lotus</title><link>https://blog.knas.me/posts/lotus/</link><pubDate>Sun, 04 Aug 2019 17:55:28 +0800</pubDate><guid>https://blog.knas.me/posts/lotus/</guid><description>in lotus scripts the way to create your a report to save the scanner results into JSON, you&amp;rsquo;ve to chose the report type between
+Cve Vuln so what is the diffrence here ? well for each script type you will need a custom faileds to save/include in your report, like for CVE scanning you have to save a few things In addition to the vulnerability information is the matchers, when you have a CVE-xxx-xxx for example and this CVE requires a GET request to /admin/user?</description><content type="html"><![CDATA[<p>in lotus scripts the way to create your a report to save the scanner results into JSON, you&rsquo;ve to chose the report type between</p>
+<ul>
+<li>Cve</li>
+<li>Vuln</li>
+</ul>
+<p>so what is the diffrence here ?
+well for each script type you will need a custom faileds to save/include in your report, like for CVE scanning you have to save a few things In addition to the vulnerability information is the matchers, when you have a CVE-xxx-xxx for example and this CVE requires a GET request to <code>/admin/user?search=&lt;img src=x onerror=alert()&gt;</code>
+and to catch this bug you&rsquo;ve to match in response body and the response headers but you&rsquo;ve to mention that in the report, so in lotus CVE report you can add where the payload matched in</p>
+<ul>
+<li>response body</li>
+<li>response headers</li>
+<li>full raw resposne</li>
+<li>request body</li>
+<li>request headers</li>
+<li>full raw request</li>
+<li>General (use it for that cases the vuln match is located in differnet ways)</li>
+</ul>
+<p>and for vulnerability scanner you can set a normal data</p>
+<h4 id="lua-code">Lua Code</h4>
+<p>for Cve Report you can use the global Class <code>CveReport</code>
+lets take the CVE-2022-0271 as an example</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-lua" data-lang="lua"><span style="display:flex;"><span><span style="color:#66d9ef">local</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">send_report</span>(url)
+</span></span><span style="display:flex;"><span>    CveReport:setName(<span style="color:#e6db74">&#34;CVE-2022-0271&#34;</span>)
+</span></span><span style="display:flex;"><span>    CveReport:setDescription(<span style="color:#e6db74">&#34;WordPress LearnPress plugin before 4.1.6 contains a cross-site scripting vulnerability. It does not sanitize and escape the lp-dismiss-notice before outputting it back via the lp_background_single_email AJAX action.&#34;</span>)
+</span></span><span style="display:flex;"><span>    CveReport:setRisk(<span style="color:#e6db74">&#34;medium&#34;</span>)
+</span></span><span style="display:flex;"><span>    CveReport:setUrl(url)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">main</span>()
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">-- SOME SCANNING LOGIC</span>
+</span></span><span style="display:flex;"><span>	send_report(<span style="color:#e6db74">&#34;http://target.com/wp-admin/search?u=&lt;img src=x onerror=alert()&gt;&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span></code></pre></div><p>o</p>
 ]]></content></item><item><title>With a single request, you can kill any Gitea server</title><link>https://blog.knas.me/posts/with-a-single-request-you-can-kill-any-gitea-server/</link><pubDate>Wed, 25 Jan 2023 11:37:10 +0200</pubDate><guid>https://blog.knas.me/posts/with-a-single-request-you-can-kill-any-gitea-server/</guid><description>Hey 😃
 in this blog I&amp;rsquo;m going to tell you how I was able to kill/dos any Gitea server I discovered this bug in Gitea version 1.14.2 in 2021
 which was fixed in 1.14.3 by the Gitea team Please note that I wasn&amp;rsquo;t targeting Gitea at all, I was doing some bug bounty hunting on a private target That target&amp;rsquo;s staging-dev.target.com has gitea on it
