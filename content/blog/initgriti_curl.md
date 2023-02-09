@@ -23,7 +23,7 @@ If all validations are fine, the backend will send an HTTP request with the valu
 
 Also the Curl is executing by subprocess.run with Shell=True flag, which means it's use shell
 
-We're good, I thought I could inject some payloads with quotes and get RCE, and say yayyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
+We're good, I thought I could inject some payloads with quotes and get RCE, and say yayyyyyyy I'm the best hacker ever
 
 As fast as I figured out that the developer was using shelx.qoute to store all values between single quotes:(
 
@@ -40,35 +40,45 @@ ssh home 'ls -l '"'"'somefile; rm -rf ~'"'"''
 
 ## Trying to bypass
 Ok, I accepted the challenge, and I didn't want to start doing random stuff like fuzzing or anything like that
-Let me do a little research about `shelx.quote` and see if there are any new CVEs or warnings about it
-According to the official module documentation, there's a warning
+
+
+Let me do a little research about `shelx.quote` first and see if there are any new CVEs or warnings about it, and According to the official module documentation, there's a warning
 ![py_warn](/images/py_warn.png)
 
 > [POSIX](http://en.wikipedia.org/wiki/POSIX) is a family of standards, specified by the [IEEE](http://www.ieee.org/portal/site), to clarify and make uniform the application programming interfaces (and ancillary issues, such as command line shell utilities) provided by Unix operating systems.
 
 Then I'll have to try bypassing this on a non-POSIX shell or on Windows
-There are two options here, one for Windows and one for testing it on Linux
-There's only one problem: Linux is POSIX, and bash is also POSIX.
+
+
+So I've to test it on Windows or Linux by using NON-POSIX Shell (both options are not really good for me)
 
 > Good damn I hate computers
 
 Anyhow, I looked for NON-POSIX shells for Linux and I found the 'fish' shell, it's awesome and non-posix, so let's try it out
 
 After I fuzzed the parameter with singlequates bypassing all my techniques and spent an hour on it, it didn't work that much.
+
 https://github.com/commixproject/commix/blob/master/src/core/tamper/singlequotes.py
 
-And after I saw that the file was in /home/[USER]/hello.png, I twitted about it to make sure it's the right one
+And after I saw that the file was in /home/[USER]/hello_RANDOMVALUE.png after my fuzzing, I twitted about it to make sure it's the right one
 ![init_twitter2](/images/init_twitter2.png)
 
 
 ### Playing with CURL
 I took a look at curl after seeing this tweet and I noticed something
 Using the @ sign at the start of a file name can be readed by CURL
-As you remember, the developer makes sure the filename is PNG
-so PNG is good for me if this server was my friend server that sharing a good memes in the Slack #random channel but here the case is diffrent I want to read real stuff like /etc/passwd
+
+As you remember, the developer makes sure the filename is **PNG**
+
+PNG is good for me if this server was my friend server that sharing a good memes in the Slack `#random` channel but here the case is diffrent I want to read real stuff like /etc/passwd
 
 hmmmm what to do now ?
-As I started looking at the official documentation of CURL command, I found that with the -F option, I can upload the file name while reading another file, so I can upload a different file and then read a different file
+
+As I started looking at the official documentation of CURL command, I found
+that with the -F option, I can upload the file name while reading another file,
+
+so I can read a different file content and named it as PNG image
+
 The file would be upload as meme.png, content would be /etc/passwd/ file
 This isn't magic, but you can change the file parameters like the content, type, name, etc...
 
@@ -82,7 +92,7 @@ $ curl -F "submit=OK;headers=@headerfile" example.com
 that's intersting let's try this trick
 
 
-#### Solving the Chanlleng
+### Solving the Challenge
 
 To get started, we need to bypass the url localhost check first. I did that with the burpsuite callback and added localhost at the beginning of the host like that: http://localhost.OAST_HOST.com
 And let's use headers parameter to bypass the image extensions
