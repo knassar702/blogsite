@@ -21,7 +21,7 @@ There are two validations here, one for the host, so the developer makes sure it
 
 If all validations are fine, the backend will send an HTTP request with the value of the url parameter and the image name to upload the image
 
-Alsi the Curl is executing by subprocess.run with Shell=True flag, which means it's use shell
+Also the Curl is executing by subprocess.run with Shell=True flag, which means it's use shell
 
 We're good, I thought I could inject some payloads with quotes and get RCE, and say yayyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
 
