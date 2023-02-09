@@ -52,7 +52,6 @@ Then I'll have to try bypassing this on a non-POSIX shell or on Windows
 
 So I've to test it on Windows or Linux by using NON-POSIX Shell (both options are not really good for me)
 
-> Good damn I hate computers
 
 Anyhow, I looked for NON-POSIX shells for Linux and I found the 'fish' shell, it's awesome and non-posix, so let's try it out
 
