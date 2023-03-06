@@ -2,21 +2,9 @@
 title: Home
 description: "It is my personal blog where I share my thoughts about cyber security "
 ---
-<img
-  id="foxy"
-  src="https://blog.knas.me//images/avatar.jpg"
-  alt="A foxy face">
+## Hi there 👋
 
-## Welcome, friend
+I am happy to welcome you to my blog where I discuss cyber security, particularly DAST and web security vulnerabilities
 
 
-It is a pleasure to welcome you to my blog in which I discuss cyber security, particularly DAST and web security vulnerabilities that I discovered. There are times when I write about other topics, such as my social life and acquiring new languages, so search only for blogs related to cybersecurity with the [security](https://blog.knas.me/tags/security/) tag.
-
-I have Linkedin profiles associated with [my career](https://www.linkedin.com/in/knassar702/) for more information.
-
-
-Additionally, I would be glad to chat with you if you would like my Discord ID : jokaboka#5222
-
----
-
-## Blogs
+For more information, see [my LinkedIn profile](https://www.linkedin.com/in/knassar702/).
