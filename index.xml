@@ -1,13 +1,76 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Home on Khaled Nassar</title><link>https://blog.knas.me/</link><description>Recent content in Home on Khaled Nassar</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Thu, 09 Feb 2023 18:32:20 +0200</lastBuildDate><atom:link href="https://blog.knas.me/index.xml" rel="self" type="application/rss+xml"/><item><title>How to set cookies for zaproxy ajax spider manually</title><link>https://blog.knas.me/blog/zaproxy_cookies/</link><pubDate>Sat, 17 Dec 2022 16:07:24 +0200</pubDate><guid>https://blog.knas.me/blog/zaproxy_cookies/</guid><description>Greetings :wave:! In this blog, we will learn how to manually insert cookies into the Ajax spider browser in Zaproxy without doing an login automation
-Why? You cannot automate the logging process because sometimes the target uses Capatch on the login page, but you can log in and copy the cookies into Zap.
-You can control every aspect of Zaproxy using its scripting feature
-With Selenium&amp;rsquo;s Firefox or Chrome browser plugin, we can write a script that executes JavaScript code whenever the Selenium tab is opened in Zap</description></item><item><title> [IBM] XSS Reflected via xml files</title><link>https://blog.knas.me/blog/ibm_xss/</link><pubDate>Mon, 26 Oct 2020 17:55:28 +0800</pubDate><guid>https://blog.knas.me/blog/ibm_xss/</guid><description>Hello World :wave: while I&amp;rsquo;m doing some bug hunting on IBM subdomains I decided instead of using subdomain enumeration I can get interesting endpoints and parameters from waybackurls to shorten the time, after reading the URLs from waybackurls I noticed a lot of endpoints that contain some URLs of XML files in rssurl parameter
-https://www-356.ibm.com/partnerworld/wps/servlet/pwdyn/pw/rss/rsstojson.jsp?ccdb=no&amp;amp;rssurl=https://www-2000.ibm.com/file.xml&amp;amp;_=1596170198353 all this API endpoint do is read the XML from the URL and then return its value of it but in JSON, for the first time I thought there was an SSRF but after a lot of trying to bypass it, it doesn&amp;rsquo;t work at all</description></item><item><title>SQL Injection on Nokia subdomain</title><link>https://blog.knas.me/blog/nokia_sqli/</link><pubDate>Mon, 04 Nov 2019 17:55:28 +0800</pubDate><guid>https://blog.knas.me/blog/nokia_sqli/</guid><description>Hello :wave:, I&amp;rsquo;ll share with you how I found sqli on Nokia that makes me able to login into the admin page you will not see something new here like new techniques or something, just simple steps
-after doing subdomain enumeration I found a subdomain that&amp;rsquo;s working with Joomla, after that I ran joomscan to get the version of the cms and plugins to see if there&amp;rsquo;s any outdated version to exploit it, and joomscan gives me an old plugin called JCK Editor with version 6.</description></item><item><title>How I Solved the intigriti CURL challenge</title><link>https://blog.knas.me/blog/initgriti_curl/</link><pubDate>Thu, 09 Feb 2023 18:32:20 +0200</pubDate><guid>https://blog.knas.me/blog/initgriti_curl/</guid><description>I woke up this morning to something interesting from Initgrit on Twitter. That&amp;rsquo;s a good challenge for reading files from servers
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Home on Khaled Nassar blog</title>
+    <link>https://blog.knas.me/</link>
+    <description>Recent content in Home on Khaled Nassar blog</description>
+    <image>
+      <title>Khaled Nassar blog</title>
+      <url>https://blog.knas.me/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://blog.knas.me/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 09 Feb 2023 18:32:20 +0200</lastBuildDate><atom:link href="https://blog.knas.me/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to set cookies for zaproxy ajax spider manually</title>
+      <link>https://blog.knas.me/blog/zaproxy_cookies/</link>
+      <pubDate>Sat, 17 Dec 2022 16:07:24 +0200</pubDate>
+      
+      <guid>https://blog.knas.me/blog/zaproxy_cookies/</guid>
+      <description>How to set cookies for zaproxy ajax spider manually </description>
+    </item>
+    
+    <item>
+      <title> [IBM] XSS Reflected via xml files</title>
+      <link>https://blog.knas.me/blog/ibm_xss/</link>
+      <pubDate>Mon, 26 Oct 2020 17:55:28 +0800</pubDate>
+      
+      <guid>https://blog.knas.me/blog/ibm_xss/</guid>
+      <description>simple writeup about XSS Reflected on ibm subdomain</description>
+    </item>
+    
+    <item>
+      <title>SQL Injection on Nokia subdomain</title>
+      <link>https://blog.knas.me/blog/nokia_sqli/</link>
+      <pubDate>Mon, 04 Nov 2019 17:55:28 +0800</pubDate>
+      
+      <guid>https://blog.knas.me/blog/nokia_sqli/</guid>
+      <description>this blog is about SQL Injection on nokia subdomain</description>
+    </item>
+    
+    <item>
+      <title>How I Solved the intigriti CURL challenge</title>
+      <link>https://blog.knas.me/blog/initgriti_curl/</link>
+      <pubDate>Thu, 09 Feb 2023 18:32:20 +0200</pubDate>
+      
+      <guid>https://blog.knas.me/blog/initgriti_curl/</guid>
+      <description>I woke up this morning to something interesting from Initgrit on Twitter. That&amp;rsquo;s a good challenge for reading files from servers
 My fast break is over, so I turn on my computer and start looking at the code they provided
 https://twitter.com/intigriti/status/1623663004532281348
 Source Code Review Basically, it accepts POST method with url and image parameters for &amp;lsquo;update picture&amp;rsquo;.
-There are two validations here, one for the host, so the developer makes sure it&amp;rsquo;s localhost, and another for the image, so the extension makes sure it&amp;rsquo;s a real image</description></item><item><title>With a single request, you can kill any Gitea server</title><link>https://blog.knas.me/blog/gitea_dos/</link><pubDate>Wed, 25 Jan 2023 11:37:10 +0200</pubDate><guid>https://blog.knas.me/blog/gitea_dos/</guid><description>Hey :smiley:
+There are two validations here, one for the host, so the developer makes sure it&amp;rsquo;s localhost, and another for the image, so the extension makes sure it&amp;rsquo;s a real image</description>
+    </item>
+    
+    <item>
+      <title>With a single request, you can kill any Gitea server</title>
+      <link>https://blog.knas.me/blog/gitea_dos/</link>
+      <pubDate>Wed, 25 Jan 2023 11:37:10 +0200</pubDate>
+      
+      <guid>https://blog.knas.me/blog/gitea_dos/</guid>
+      <description>Hey :smiley:
 in this blog I&amp;rsquo;m going to tell you how I was able to kill/dos any Gitea server I discovered this bug in Gitea version 1.14.2 in 2021
 which was fixed in 1.14.3 by the Gitea team Please note that I wasn&amp;rsquo;t targeting Gitea at all, I was doing some bug bounty hunting on a private target That target&amp;rsquo;s staging-dev.target.com has gitea on it
-and I thought, &amp;ldquo;Okay, I think there&amp;rsquo;s CVES for that product&amp;rdquo; and yeah I found some but Unfortunately, the POC isn&amp;rsquo;t included in the CVE report (only the PR on github)</description></item><item><title>About</title><link>https://blog.knas.me/about/</link><pubDate>Mon, 09 Jan 2023 00:00:00 +0000</pubDate><guid>https://blog.knas.me/about/</guid><description>I am passionate about cyber security and programming, There is a lot of information that I have collected about my experiences as a bug bounty hunter in the past, and I’ve found many security issues in many company products like Sony, Nokia, Gitea, Telekom Germany, Zaproxy, IBM, OPPO, Neon Wordpress Theme Additionally, I enjoy doing some security automation stuff with Python and Rust as a result of this, I have developed some automated tools that are used by bug bounty hunters such as scant3r, Lotus, Lorsrf, pyshell</description></item></channel></rss>
+and I thought, &amp;ldquo;Okay, I think there&amp;rsquo;s CVES for that product&amp;rdquo; and yeah I found some but Unfortunately, the POC isn&amp;rsquo;t included in the CVE report (only the PR on github)</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://blog.knas.me/about/</link>
+      <pubDate>Mon, 09 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.knas.me/about/</guid>
+      <description>I am passionate about cyber security and programming, There is a lot of information that I have collected about my experiences as a bug bounty hunter in the past, and I’ve found many security issues in many company products like Sony, Nokia, Gitea, Telekom Germany, Zaproxy, IBM, OPPO, Neon Wordpress Theme Additionally, I enjoy doing some security automation stuff with Python and Rust as a result of this, I have developed some automated tools that are used by bug bounty hunters such as scant3r, Lotus, Lorsrf, pyshell</description>
+    </item>
+    
+  </channel>
+</rss>

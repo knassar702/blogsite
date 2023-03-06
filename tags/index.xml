@@ -1,1 +1,69 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tags on Khaled Nassar</title><link>https://blog.knas.me/tags/</link><description>Recent content in Tags on Khaled Nassar</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Thu, 09 Feb 2023 18:32:20 +0200</lastBuildDate><atom:link href="https://blog.knas.me/tags/index.xml" rel="self" type="application/rss+xml"/><item><title>bugbounty</title><link>https://blog.knas.me/tags/bugbounty/index.json</link><pubDate>Thu, 09 Feb 2023 18:32:20 +0200</pubDate><guid>https://blog.knas.me/tags/bugbounty/index.json</guid><description/></item><item><title>security</title><link>https://blog.knas.me/tags/security/index.json</link><pubDate>Thu, 09 Feb 2023 18:32:20 +0200</pubDate><guid>https://blog.knas.me/tags/security/index.json</guid><description/></item><item><title>webpentesting</title><link>https://blog.knas.me/tags/webpentesting/index.json</link><pubDate>Thu, 09 Feb 2023 18:32:20 +0200</pubDate><guid>https://blog.knas.me/tags/webpentesting/index.json</guid><description/></item><item><title>cybersecurity</title><link>https://blog.knas.me/tags/cybersecurity/index.json</link><pubDate>Wed, 25 Jan 2023 11:37:10 +0200</pubDate><guid>https://blog.knas.me/tags/cybersecurity/index.json</guid><description/></item><item><title>dos</title><link>https://blog.knas.me/tags/dos/index.json</link><pubDate>Wed, 25 Jan 2023 11:37:10 +0200</pubDate><guid>https://blog.knas.me/tags/dos/index.json</guid><description/></item><item><title>automation</title><link>https://blog.knas.me/tags/automation/index.json</link><pubDate>Sat, 17 Dec 2022 16:07:24 +0200</pubDate><guid>https://blog.knas.me/tags/automation/index.json</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tags on Khaled Nassar blog</title>
+    <link>https://blog.knas.me/tags/</link>
+    <description>Recent content in Tags on Khaled Nassar blog</description>
+    <image>
+      <title>Khaled Nassar blog</title>
+      <url>https://blog.knas.me/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://blog.knas.me/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 09 Feb 2023 18:32:20 +0200</lastBuildDate><atom:link href="https://blog.knas.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>bugbounty</title>
+      <link>https://blog.knas.me/tags/bugbounty/</link>
+      <pubDate>Thu, 09 Feb 2023 18:32:20 +0200</pubDate>
+      
+      <guid>https://blog.knas.me/tags/bugbounty/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>security</title>
+      <link>https://blog.knas.me/tags/security/</link>
+      <pubDate>Thu, 09 Feb 2023 18:32:20 +0200</pubDate>
+      
+      <guid>https://blog.knas.me/tags/security/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>webpentesting</title>
+      <link>https://blog.knas.me/tags/webpentesting/</link>
+      <pubDate>Thu, 09 Feb 2023 18:32:20 +0200</pubDate>
+      
+      <guid>https://blog.knas.me/tags/webpentesting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cybersecurity</title>
+      <link>https://blog.knas.me/tags/cybersecurity/</link>
+      <pubDate>Wed, 25 Jan 2023 11:37:10 +0200</pubDate>
+      
+      <guid>https://blog.knas.me/tags/cybersecurity/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dos</title>
+      <link>https://blog.knas.me/tags/dos/</link>
+      <pubDate>Wed, 25 Jan 2023 11:37:10 +0200</pubDate>
+      
+      <guid>https://blog.knas.me/tags/dos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>automation</title>
+      <link>https://blog.knas.me/tags/automation/</link>
+      <pubDate>Sat, 17 Dec 2022 16:07:24 +0200</pubDate>
+      
+      <guid>https://blog.knas.me/tags/automation/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

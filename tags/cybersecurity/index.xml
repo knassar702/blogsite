@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>cybersecurity on Khaled Nassar blog</title>
+    <link>https://blog.knas.me/tags/cybersecurity/</link>
+    <description>Recent content in cybersecurity on Khaled Nassar blog</description>
+    <image>
+      <title>Khaled Nassar blog</title>
+      <url>https://blog.knas.me/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://blog.knas.me/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 25 Jan 2023 11:37:10 +0200</lastBuildDate><atom:link href="https://blog.knas.me/tags/cybersecurity/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>With a single request, you can kill any Gitea server</title>
+      <link>https://blog.knas.me/blog/gitea_dos/</link>
+      <pubDate>Wed, 25 Jan 2023 11:37:10 +0200</pubDate>
+      
+      <guid>https://blog.knas.me/blog/gitea_dos/</guid>
+      <description>Hey :smiley:
+in this blog I&amp;rsquo;m going to tell you how I was able to kill/dos any Gitea server I discovered this bug in Gitea version 1.14.2 in 2021
+which was fixed in 1.14.3 by the Gitea team Please note that I wasn&amp;rsquo;t targeting Gitea at all, I was doing some bug bounty hunting on a private target That target&amp;rsquo;s staging-dev.target.com has gitea on it
+and I thought, &amp;ldquo;Okay, I think there&amp;rsquo;s CVES for that product&amp;rdquo; and yeah I found some but Unfortunately, the POC isn&amp;rsquo;t included in the CVE report (only the PR on github)</description>
+    </item>
+    
+  </channel>
+</rss>
