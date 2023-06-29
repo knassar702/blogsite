@@ -2,48 +2,48 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>security on Khaled Nassar blog</title>
-    <link>https://www.knas.me/tags/security/</link>
+    <link>https://blog.knas.me/tags/security/</link>
     <description>Recent content in security on Khaled Nassar blog</description>
     <image>
       <title>Khaled Nassar blog</title>
-      <url>https://www.knas.me/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://www.knas.me/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>https://blog.knas.me/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://blog.knas.me/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 09 Feb 2023 18:32:20 +0200</lastBuildDate><atom:link href="https://www.knas.me/tags/security/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 09 Feb 2023 18:32:20 +0200</lastBuildDate><atom:link href="https://blog.knas.me/tags/security/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to set cookies for zaproxy ajax spider manually</title>
-      <link>https://www.knas.me/blog/zaproxy_cookies/</link>
+      <link>https://blog.knas.me/blog/zaproxy_cookies/</link>
       <pubDate>Sat, 17 Dec 2022 16:07:24 +0200</pubDate>
       
-      <guid>https://www.knas.me/blog/zaproxy_cookies/</guid>
+      <guid>https://blog.knas.me/blog/zaproxy_cookies/</guid>
       <description>How to set cookies for zaproxy ajax spider manually </description>
     </item>
     
     <item>
       <title> [IBM] XSS Reflected via xml files</title>
-      <link>https://www.knas.me/blog/ibm_xss/</link>
+      <link>https://blog.knas.me/blog/ibm_xss/</link>
       <pubDate>Mon, 26 Oct 2020 17:55:28 +0800</pubDate>
       
-      <guid>https://www.knas.me/blog/ibm_xss/</guid>
+      <guid>https://blog.knas.me/blog/ibm_xss/</guid>
       <description>simple writeup about XSS Reflected on ibm subdomain</description>
     </item>
     
     <item>
       <title>SQL Injection on Nokia subdomain</title>
-      <link>https://www.knas.me/blog/nokia_sqli/</link>
+      <link>https://blog.knas.me/blog/nokia_sqli/</link>
       <pubDate>Mon, 04 Nov 2019 17:55:28 +0800</pubDate>
       
-      <guid>https://www.knas.me/blog/nokia_sqli/</guid>
+      <guid>https://blog.knas.me/blog/nokia_sqli/</guid>
       <description>this blog is about SQL Injection on nokia subdomain</description>
     </item>
     
     <item>
       <title>How I Solved the intigriti CURL challenge</title>
-      <link>https://www.knas.me/blog/initgriti_curl/</link>
+      <link>https://blog.knas.me/blog/initgriti_curl/</link>
       <pubDate>Thu, 09 Feb 2023 18:32:20 +0200</pubDate>
       
-      <guid>https://www.knas.me/blog/initgriti_curl/</guid>
+      <guid>https://blog.knas.me/blog/initgriti_curl/</guid>
       <description>I woke up this morning to something interesting from Initgrit on Twitter. That&amp;rsquo;s a good challenge for reading files from servers
 My fast break is over, so I turn on my computer and start looking at the code they provided
 https://twitter.com/intigriti/status/1623663004532281348
