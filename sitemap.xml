@@ -2,51 +2,51 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://blog.knas.me/blog/zaproxy_cookies/</loc>
+    <loc>https://www.knas.me/blog/zaproxy_cookies/</loc>
     <lastmod>2022-12-17T16:07:24+02:00</lastmod>
   </url><url>
-    <loc>https://blog.knas.me/blog/ibm_xss/</loc>
+    <loc>https://www.knas.me/blog/ibm_xss/</loc>
     <lastmod>2020-10-26T17:55:28+08:00</lastmod>
   </url><url>
-    <loc>https://blog.knas.me/blog/nokia_sqli/</loc>
+    <loc>https://www.knas.me/blog/nokia_sqli/</loc>
     <lastmod>2019-11-04T17:55:28+08:00</lastmod>
   </url><url>
-    <loc>https://blog.knas.me/blog/</loc>
+    <loc>https://www.knas.me/blog/</loc>
     <lastmod>2023-02-09T18:32:20+02:00</lastmod>
   </url><url>
-    <loc>https://blog.knas.me/tags/bugbounty/</loc>
+    <loc>https://www.knas.me/tags/bugbounty/</loc>
     <lastmod>2023-02-09T18:32:20+02:00</lastmod>
   </url><url>
-    <loc>https://blog.knas.me/</loc>
+    <loc>https://www.knas.me/</loc>
     <lastmod>2023-02-09T18:32:20+02:00</lastmod>
   </url><url>
-    <loc>https://blog.knas.me/blog/initgriti_curl/</loc>
+    <loc>https://www.knas.me/blog/initgriti_curl/</loc>
     <lastmod>2023-02-09T18:32:20+02:00</lastmod>
   </url><url>
-    <loc>https://blog.knas.me/tags/security/</loc>
+    <loc>https://www.knas.me/tags/security/</loc>
     <lastmod>2023-02-09T18:32:20+02:00</lastmod>
   </url><url>
-    <loc>https://blog.knas.me/tags/</loc>
+    <loc>https://www.knas.me/tags/</loc>
     <lastmod>2023-02-09T18:32:20+02:00</lastmod>
   </url><url>
-    <loc>https://blog.knas.me/tags/webpentesting/</loc>
+    <loc>https://www.knas.me/tags/webpentesting/</loc>
     <lastmod>2023-02-09T18:32:20+02:00</lastmod>
   </url><url>
-    <loc>https://blog.knas.me/tags/cybersecurity/</loc>
+    <loc>https://www.knas.me/tags/cybersecurity/</loc>
     <lastmod>2023-01-25T11:37:10+02:00</lastmod>
   </url><url>
-    <loc>https://blog.knas.me/tags/dos/</loc>
+    <loc>https://www.knas.me/tags/dos/</loc>
     <lastmod>2023-01-25T11:37:10+02:00</lastmod>
   </url><url>
-    <loc>https://blog.knas.me/blog/gitea_dos/</loc>
+    <loc>https://www.knas.me/blog/gitea_dos/</loc>
     <lastmod>2023-01-25T11:37:10+02:00</lastmod>
   </url><url>
-    <loc>https://blog.knas.me/about/</loc>
+    <loc>https://www.knas.me/about/</loc>
     <lastmod>2023-01-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://blog.knas.me/tags/automation/</loc>
+    <loc>https://www.knas.me/tags/automation/</loc>
     <lastmod>2022-12-17T16:07:24+02:00</lastmod>
   </url><url>
-    <loc>https://blog.knas.me/categories/</loc>
+    <loc>https://www.knas.me/categories/</loc>
   </url>
 </urlset>
