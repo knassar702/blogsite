@@ -10,31 +10,13 @@
       <link>https://blog.knas.me/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 09 Feb 2023 18:32:20 +0200</lastBuildDate><atom:link href="https://blog.knas.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 25 Jan 2023 11:37:10 +0200</lastBuildDate><atom:link href="https://blog.knas.me/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>bugbounty</title>
       <link>https://blog.knas.me/tags/bugbounty/</link>
-      <pubDate>Thu, 09 Feb 2023 18:32:20 +0200</pubDate>
+      <pubDate>Wed, 25 Jan 2023 11:37:10 +0200</pubDate>
       
       <guid>https://blog.knas.me/tags/bugbounty/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>security</title>
-      <link>https://blog.knas.me/tags/security/</link>
-      <pubDate>Thu, 09 Feb 2023 18:32:20 +0200</pubDate>
-      
-      <guid>https://blog.knas.me/tags/security/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>webpentesting</title>
-      <link>https://blog.knas.me/tags/webpentesting/</link>
-      <pubDate>Thu, 09 Feb 2023 18:32:20 +0200</pubDate>
-      
-      <guid>https://blog.knas.me/tags/webpentesting/</guid>
       <description></description>
     </item>
     
@@ -62,6 +44,24 @@
       <pubDate>Sat, 17 Dec 2022 16:07:24 +0200</pubDate>
       
       <guid>https://blog.knas.me/tags/automation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>security</title>
+      <link>https://blog.knas.me/tags/security/</link>
+      <pubDate>Sat, 17 Dec 2022 16:07:24 +0200</pubDate>
+      
+      <guid>https://blog.knas.me/tags/security/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>webpentesting</title>
+      <link>https://blog.knas.me/tags/webpentesting/</link>
+      <pubDate>Sat, 17 Dec 2022 16:07:24 +0200</pubDate>
+      
+      <guid>https://blog.knas.me/tags/webpentesting/</guid>
       <description></description>
     </item>
     

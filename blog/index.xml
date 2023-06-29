@@ -10,7 +10,7 @@
       <link>https://blog.knas.me/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 09 Feb 2023 18:32:20 +0200</lastBuildDate><atom:link href="https://blog.knas.me/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 25 Jan 2023 11:37:10 +0200</lastBuildDate><atom:link href="https://blog.knas.me/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to set cookies for zaproxy ajax spider manually</title>
       <link>https://blog.knas.me/blog/zaproxy_cookies/</link>
@@ -36,19 +36,6 @@
       
       <guid>https://blog.knas.me/blog/nokia_sqli/</guid>
       <description>this blog is about SQL Injection on nokia subdomain</description>
-    </item>
-    
-    <item>
-      <title>How I Solved the intigriti CURL challenge</title>
-      <link>https://blog.knas.me/blog/initgriti_curl/</link>
-      <pubDate>Thu, 09 Feb 2023 18:32:20 +0200</pubDate>
-      
-      <guid>https://blog.knas.me/blog/initgriti_curl/</guid>
-      <description>I woke up this morning to something interesting from Initgrit on Twitter. That&amp;rsquo;s a good challenge for reading files from servers
-My fast break is over, so I turn on my computer and start looking at the code they provided
-https://twitter.com/intigriti/status/1623663004532281348
-Source Code Review Basically, it accepts POST method with url and image parameters for &amp;lsquo;update picture&amp;rsquo;.
-There are two validations here, one for the host, so the developer makes sure it&amp;rsquo;s localhost, and another for the image, so the extension makes sure it&amp;rsquo;s a real image</description>
     </item>
     
     <item>
