@@ -1,4 +1,4 @@
-baseURL: "https://www.knas.me/"
+baseURL: "https://blog.knas.me/"
 title: Khaled Nassar blog
 paginate: 5
 theme: PaperMod
