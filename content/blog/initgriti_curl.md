@@ -2,7 +2,7 @@
 title: "How I Solved the intigriti CURL challenge"
 tags: ["bugbounty","security","webpentesting"]
 date: 2023-02-09T18:32:20+02:00
-draft: false
+draft: true
 ---
 
 I woke up this morning to something interesting from Initgrit on Twitter. That's a good challenge for reading files from servers
