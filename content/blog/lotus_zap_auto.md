@@ -1,5 +1,5 @@
 ---
-title: "How to optimize Zapoxy as an authorized crawler for Lotus"
+title: "How to optimize Zaproxy as an authorized crawler for Lotus"
 date: 2023-02-06T21:52:54+02:00
 draft: false
 ---
