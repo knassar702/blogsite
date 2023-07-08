@@ -10,7 +10,7 @@
       <link>https://blog.knas.me/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 25 Jan 2023 11:37:10 +0200</lastBuildDate><atom:link href="https://blog.knas.me/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 06 Feb 2023 21:52:54 +0200</lastBuildDate><atom:link href="https://blog.knas.me/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to set cookies for zaproxy ajax spider manually</title>
       <link>https://blog.knas.me/blog/zaproxy_cookies/</link>
@@ -36,6 +36,16 @@
       
       <guid>https://blog.knas.me/blog/nokia_sqli/</guid>
       <description>this blog is about SQL Injection on nokia subdomain</description>
+    </item>
+    
+    <item>
+      <title>How to optimize Zapoxy as an authorized crawler for Lotus</title>
+      <link>https://blog.knas.me/blog/lotus_zap_auto/</link>
+      <pubDate>Mon, 06 Feb 2023 21:52:54 +0200</pubDate>
+      
+      <guid>https://blog.knas.me/blog/lotus_zap_auto/</guid>
+      <description>TLDR &amp;gt; Optimize Zapoxy as an authorized crawler for Lotus using its scripting and automation framework
+List of Content Introduction What&amp;rsquo;s Zaproxy Scripting Works Exporting customs sitemap in JSON output Using the Output with Lotus Introduction Zaproxy is a powerful security automation tool with numerous hidden features, in this blog post we will explore its capabilities for authentication, crawling, scoping, and utilizing the results in another tool Specifically, we will focus on using Lotus, a tool that supports custom sitemap JSON format, to efficiently scan full requests</description>
     </item>
     
     <item>
