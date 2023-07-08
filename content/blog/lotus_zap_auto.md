@@ -100,7 +100,7 @@ To achieve the desired outcome, follow these steps:
 
 
 
-#### Zaproxy Automation Framework
+## Zaproxy Automation Framework
 As mentioned earlier in the blog, you have the ability to control various components of Zaproxy using a simple YAML file. To access this feature, follow the steps below:
 
 - Open Zaproxy and click on the "New" tab.
