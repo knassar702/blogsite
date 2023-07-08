@@ -1,7 +1,7 @@
 ---
 title: "How to optimize Zapoxy as an authorized crawler for Lotus"
 date: 2023-02-06T21:52:54+02:00
-draft: true
+draft: false
 ---
 
 **TLDR** > Optimize Zapoxy as an authorized crawler for Lotus using its scripting and automation framework
