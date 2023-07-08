@@ -110,7 +110,7 @@ As mentioned earlier in the blog, you have the ability to control various compon
 - Modify the scope according to your requirements by adjusting the settings.
 - Click on the "Run" button to execute the automation process.
 
-[zap_automation](/images/zap_automation.png)
+![zap_automation](/images/zap_automation.png)
 
 Make sure to refer to the screenshots for a visual reference on how to access the Zaproxy Automation Framework and configure the scope.
 
