@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>hackthebox on Khaled Nassar blog</title>
+    <link>https://blog.knas.me/tags/hackthebox/</link>
+    <description>Recent content in hackthebox on Khaled Nassar blog</description>
+    <image>
+      <title>Khaled Nassar blog</title>
+      <url>https://blog.knas.me/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://blog.knas.me/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 10 Aug 2024 11:37:10 +0200</lastBuildDate><atom:link href="https://blog.knas.me/tags/hackthebox/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[HTB] Solving DoxPit Challange</title>
+      <link>https://blog.knas.me/blog/htb/</link>
+      <pubDate>Sat, 10 Aug 2024 11:37:10 +0200</pubDate>
+      
+      <guid>https://blog.knas.me/blog/htb/</guid>
+      <description>Here: Medium</description>
+    </item>
+    
+  </channel>
+</rss>

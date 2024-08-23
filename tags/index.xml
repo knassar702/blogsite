@@ -10,11 +10,11 @@
       <link>https://blog.knas.me/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 25 Jan 2023 11:37:10 +0200</lastBuildDate><atom:link href="https://blog.knas.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 10 Aug 2024 11:37:10 +0200</lastBuildDate><atom:link href="https://blog.knas.me/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>bugbounty</title>
       <link>https://blog.knas.me/tags/bugbounty/</link>
-      <pubDate>Wed, 25 Jan 2023 11:37:10 +0200</pubDate>
+      <pubDate>Sat, 10 Aug 2024 11:37:10 +0200</pubDate>
       
       <guid>https://blog.knas.me/tags/bugbounty/</guid>
       <description></description>
@@ -23,9 +23,18 @@
     <item>
       <title>cybersecurity</title>
       <link>https://blog.knas.me/tags/cybersecurity/</link>
-      <pubDate>Wed, 25 Jan 2023 11:37:10 +0200</pubDate>
+      <pubDate>Sat, 10 Aug 2024 11:37:10 +0200</pubDate>
       
       <guid>https://blog.knas.me/tags/cybersecurity/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hackthebox</title>
+      <link>https://blog.knas.me/tags/hackthebox/</link>
+      <pubDate>Sat, 10 Aug 2024 11:37:10 +0200</pubDate>
+      
+      <guid>https://blog.knas.me/tags/hackthebox/</guid>
       <description></description>
     </item>
     

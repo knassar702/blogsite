@@ -10,7 +10,7 @@
       <link>https://blog.knas.me/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 06 Feb 2023 21:52:54 +0200</lastBuildDate><atom:link href="https://blog.knas.me/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 10 Aug 2024 11:37:10 +0200</lastBuildDate><atom:link href="https://blog.knas.me/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to set cookies for zaproxy ajax spider manually</title>
       <link>https://blog.knas.me/blog/zaproxy_cookies/</link>
@@ -36,6 +36,15 @@
       
       <guid>https://blog.knas.me/blog/nokia_sqli/</guid>
       <description>this blog is about SQL Injection on nokia subdomain</description>
+    </item>
+    
+    <item>
+      <title>[HTB] Solving DoxPit Challange</title>
+      <link>https://blog.knas.me/blog/htb/</link>
+      <pubDate>Sat, 10 Aug 2024 11:37:10 +0200</pubDate>
+      
+      <guid>https://blog.knas.me/blog/htb/</guid>
+      <description>Here: Medium</description>
     </item>
     
     <item>

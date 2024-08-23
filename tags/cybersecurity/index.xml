@@ -10,7 +10,16 @@
       <link>https://blog.knas.me/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 25 Jan 2023 11:37:10 +0200</lastBuildDate><atom:link href="https://blog.knas.me/tags/cybersecurity/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 10 Aug 2024 11:37:10 +0200</lastBuildDate><atom:link href="https://blog.knas.me/tags/cybersecurity/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[HTB] Solving DoxPit Challange</title>
+      <link>https://blog.knas.me/blog/htb/</link>
+      <pubDate>Sat, 10 Aug 2024 11:37:10 +0200</pubDate>
+      
+      <guid>https://blog.knas.me/blog/htb/</guid>
+      <description>Here: Medium</description>
+    </item>
+    
     <item>
       <title>With a single request, you can kill any Gitea server</title>
       <link>https://blog.knas.me/blog/gitea_dos/</link>
